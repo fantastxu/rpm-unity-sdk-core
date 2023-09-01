@@ -36,16 +36,14 @@ namespace ReadyPlayerMe.Core.Editor
         private const float TIMEOUT_FOR_MODULE_INSTALLATION = 20f;
         private const string AVATAR_LOADER_SUBSTRING = "avatarloader";
 
-
         static ModuleInstaller()
         {
-    #if !GLTFAST
+#if !GLTFAST
             AddGltfastSymbol();
-    #endif
+#endif
             Events.registeredPackages += OnRegisteredPackages;
             Events.registeringPackages += OnRegisteringPackages;
         }
-
 
         /// <summary>
         ///     Called when a package is added, removed or changed.
@@ -61,9 +59,9 @@ namespace ReadyPlayerMe.Core.Editor
             if (args.added != null && args.added.Any(p => p.name == CORE_MODULE_NAME))
             {
                 InstallModules();
-                CoreSettingsHandler.CreateCoreSettings();
                 AddScriptingDefineSymbolToAllBuildTargetGroups(READY_PLAYER_ME_SYMBOL);
                 AddGltfastSymbol();
+                CoreSettingsHandler.CreateCoreSettings();
             }
             ValidateModules();
         }
