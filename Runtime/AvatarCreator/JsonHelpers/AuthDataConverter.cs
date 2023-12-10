@@ -8,6 +8,12 @@ namespace ReadyPlayerMe.AvatarCreator
     {
         private const string DATA = "data";
 
+        //bowie 
+        public AuthDataConverter()
+        {
+            
+        }
+
         public static string CreatePayload(Dictionary<string, string> data)
         {
             return new JObject(

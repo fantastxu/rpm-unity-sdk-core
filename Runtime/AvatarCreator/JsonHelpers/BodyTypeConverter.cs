@@ -10,6 +10,12 @@ namespace ReadyPlayerMe.AvatarCreator
         private const string FULL_BODY = "fullbody";
         private const string HALF_BODY = "halfbody";
 
+        //bowie added
+        public BodyTypeConverter()
+        {
+            
+        }
+
         public override void WriteJson(JsonWriter writer, BodyType value, JsonSerializer serializer)
         {
             serializer.Serialize(writer, value.ToString().ToLower());

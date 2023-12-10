@@ -6,6 +6,11 @@ namespace ReadyPlayerMe.AvatarCreator
 {
     public class CategoryConverter : JsonConverter
     {
+        //bowie added
+        public CategoryConverter()
+        {
+            
+        }
         public override bool CanConvert(Type objectType)
         {
             return objectType == typeof(Category);

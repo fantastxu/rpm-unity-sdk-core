@@ -10,6 +10,12 @@ namespace ReadyPlayerMe.AvatarCreator
         private const string MALE = "male";
         private const string FEMALE = "female";
 
+        //bowie added
+        public GenderConverter()
+        {
+            
+        }
+
         public override bool CanConvert(Type objectType)
         {
             return objectType == typeof(OutfitGender);
