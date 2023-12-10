@@ -39,7 +39,6 @@ namespace ReadyPlayerMe.AvatarCreator
             }
             catch (Exception e)
             {
-                Debug.Log($"==============>>>>><<<<<{e.Message}");
                 return assets.ToArray();
             }
 
