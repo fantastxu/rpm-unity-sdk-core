@@ -37,8 +37,9 @@ namespace ReadyPlayerMe.AvatarCreator
                 assetData = await GetRequest(LIMIT, 1, null, gender, bodyType, ctx: ctx);
                 assets.UnionWith(assetData.Assets);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Debug.Log($"==============>>>>><<<<<{e.Message}");
                 return assets.ToArray();
             }
 
