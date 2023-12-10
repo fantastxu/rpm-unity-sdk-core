@@ -9,9 +9,9 @@ namespace ReadyPlayerMe.AvatarCreator
         private const string DATA = "data";
 
         //bowie 
-        public AuthDataConverter()
+        public static AuthDataConverter()
         {
-            
+
         }
 
         public static string CreatePayload(Dictionary<string, string> data)
