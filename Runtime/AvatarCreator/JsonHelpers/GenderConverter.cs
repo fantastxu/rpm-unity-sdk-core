@@ -2,19 +2,14 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ReadyPlayerMe.Core;
+using UnityEngine.Scripting;
 
 namespace ReadyPlayerMe.AvatarCreator
 {
-    public class GenderConverter : JsonConverter
+    [Preserve] public class GenderConverter : JsonConverter
     {
         private const string MALE = "male";
         private const string FEMALE = "female";
-
-        //bowie added
-        public GenderConverter()
-        {
-            
-        }
 
         public override bool CanConvert(Type objectType)
         {

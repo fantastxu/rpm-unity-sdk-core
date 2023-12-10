@@ -1,16 +1,13 @@
 ﻿using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using UnityEngine.Scripting;
 
 namespace ReadyPlayerMe.AvatarCreator
 {
-    public class CategoryConverter : JsonConverter
+    [Preserve] public class CategoryConverter : JsonConverter
     {
-        //bowie added
-        public CategoryConverter()
-        {
-            
-        }
+
         public override bool CanConvert(Type objectType)
         {
             return objectType == typeof(Category);
